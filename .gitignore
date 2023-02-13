@@ -1,3 +1,13 @@
+#Custom
+*.vcxproj*
+*.sln
+*_autogen/
+.idea/
+cmake-build-*/
+build/
+latex/
+
+
 ---------------------------------------------------------------------
 #C++ gitignore
 # Prerequisites
