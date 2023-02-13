@@ -1,0 +1,25 @@
+1) Git Reset
+This method allows you to unadd any files you have previously added by mistake before you commit.
+The command for this is "git reset <HEAD> <FILENAME>
+You can confirm if this works by using the command "git status" and it will show that the changes are not staged for commit meaning that it has unsuccessfully unadded the file.
+
+2) Disregarding changes in the working tree using checkout
+This method undoes changes by overwriting files with previous versions.
+This means that it could potentially delete any important work so it is risky to use this command.
+The command for this is "git checkout -- <FILENAME>
+You can confirm if this works by using the "git status" and it will show that there  is nothing to commit meaning that the changes has been undone.
+
+3) Checking out a previous version using checkout
+This method places a previous commit/version allowing you to work on previous code without deleting anything from the history.
+It sets this older version to the HEAD and the HEAD then points to the older version.
+The command for this is "git checkout HEAD~1" where "~1" can be modified to whichever version you would like to roll back to.
+You can confirm if this works by using the "git log" and it will show you a different version as the HEAD meaning that it is not the version you are editing
+You can revert back to the latest version by using the command "git checkout master" where it will revert back to the original state.
+
+4) Undoing using reset
+This method uses the reset function to refer to an older comit and "forget" about a newer commit so the newer commit will still appear in the disk but not in Git.
+This means that no files/work gets deleted.
+The command for this is "git reset HEAD~1" where you can change "~1" to which version you want to refer to.
+You can confirm if this works by using "git log" and you will see the other commits disappear.
+This change can be undone by the command "git reset HEAD@{1}" 
+Once again, you can confirm by "git log" and the other commits should appear again.
