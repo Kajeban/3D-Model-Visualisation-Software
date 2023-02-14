@@ -16,11 +16,12 @@ if (NOT BUILD_SHARED_LIBS)
 # is used to defined in adder.h
 
 add_definitions( -Dmaths_STATIC)
-endif()
 
-if (BUILD_SHARED_LIBDS)
-add_definitions( -Dmaths_SHARED)
-endif()
+endif() 
+
+# if (BUILD_SHARED_LIBS)
+#add_definitions( -Dmaths_SHARED)
+#endif()
 
 # It also contains an executable
 add_executable(calc calc.cpp)
