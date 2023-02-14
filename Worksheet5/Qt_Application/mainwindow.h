@@ -2,6 +2,8 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include "ModelPart.h"
+#include "ModelPartList.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -18,9 +20,12 @@ public:
 public slots:
     void handleButton();
     void handleButton2();
+signals:
+    void statusUpdateMessage(const QString& message, int timeout);
 //--------------------------------------------------
 private:
     Ui::MainWindow *ui;
+    ModelPartList* partList;
 };
 
 #endif // MAINWINDOW_H
