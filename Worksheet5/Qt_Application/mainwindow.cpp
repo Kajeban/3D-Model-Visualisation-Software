@@ -8,11 +8,13 @@ MainWindow::MainWindow(QWidget* parent)
 
 {
     ui->setupUi(this);
+
+    //--------------------------------------------------
+    connect(ui->pushButton, &QPushButton::released, this, &MainWindow::handleButton);
+    connect(ui->pushButton_2, &QPushButton::released, this, &MainWindow::handleButton2);
+    //--------------------------------------------------
 }
 
-//--------------------------------------------------
-connect(ui->pushButton, &QPushButton::released, this, &MainWindow::handleButton);
-//--------------------------------------------------
 
 
 MainWindow::~MainWindow()
@@ -26,5 +28,13 @@ void MainWindow::handleButton()
     msgBox.setText("Add button was clicked");
     msgBox.exec();
 }
+
+void MainWindow::handleButton2()
+{
+    QMessageBox msgBox;
+    msgBox.setText("Add button was clicked");
+    msgBox.exec();
+}
 //--------------------------------------------------
+
 
