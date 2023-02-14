@@ -7,7 +7,6 @@ cmake-build-*/
 build/
 latex/
 
-
 ---------------------------------------------------------------------
 #C++ gitignore
 # Prerequisites
