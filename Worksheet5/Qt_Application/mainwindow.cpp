@@ -88,3 +88,9 @@ void MainWindow::handleTreeClicked()
 //--------------------------------------------------
 
 
+
+void MainWindow::on_actionOpen_File_triggered()
+{
+    emit statusUpdateMessage(QString("Open File action triggered"),0);
+}
+
