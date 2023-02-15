@@ -25,6 +25,9 @@
           <verstretch>0</verstretch>
          </sizepolicy>
         </property>
+        <property name="contextMenuPolicy">
+         <enum>Qt::ActionsContextMenu</enum>
+        </property>
        </widget>
       </item>
       <item>
@@ -109,6 +112,14 @@
    </property>
    <property name="text">
     <string>Open File</string>
+   </property>
+  </action>
+  <action name="actionItem_Options">
+   <property name="text">
+    <string>Item Options</string>
+   </property>
+   <property name="toolTip">
+    <string>Item Options</string>
    </property>
   </action>
  </widget>

@@ -10,6 +10,10 @@ MainWindow::MainWindow(QWidget* parent)
     ui->setupUi(this);
 
     //--------------------------------------------------
+    ui->treeView->addAction(ui->actionItem_Options);
+    //--------------------------------------------------
+
+    //--------------------------------------------------
     connect(ui->pushButton, &QPushButton::released, this, &MainWindow::handleButton);
     connect(ui->pushButton_2, &QPushButton::released, this, &MainWindow::handleButton2);
     connect(this, &MainWindow::statusUpdateMessage, ui->statusbar, &QStatusBar::showMessage);
@@ -101,5 +105,8 @@ void MainWindow::on_actionOpen_File_triggered()
     emit statusUpdateMessage(QString("File Name: ") + fileName, 0);
 }
 //--------------------------------------------------
+void MainWindow::on_actionItem_Options_triggered()
+{
 
+}
 //--------------------------------------------------
