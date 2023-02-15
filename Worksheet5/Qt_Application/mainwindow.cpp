@@ -54,8 +54,6 @@ MainWindow::MainWindow(QWidget* parent)
     //--------------------------------------------------
 }
 
-
-
 MainWindow::~MainWindow()
 {
     delete ui;
@@ -87,10 +85,13 @@ void MainWindow::handleTreeClicked()
 }
 //--------------------------------------------------
 
-
-
+//--------------------------------------------------
 void MainWindow::on_actionOpen_File_triggered()
 {
     emit statusUpdateMessage(QString("Open File action triggered"),0);
+    QString fileName = QFileDialog::getOpenFileName(this, tr("Open File"), "C:\\", tr("STL Files(*.stl);;Text Files(*.txt)"));
+    emit statusUpdateMessage(QString("File Name: ") + fileName, 0);
 }
+//--------------------------------------------------
 
+//--------------------------------------------------
