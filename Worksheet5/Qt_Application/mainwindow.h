@@ -5,6 +5,7 @@
 #include "ModelPart.h"
 #include "ModelPartList.h"
 #include "QFileDialog.h"
+#include "optiondialog.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
