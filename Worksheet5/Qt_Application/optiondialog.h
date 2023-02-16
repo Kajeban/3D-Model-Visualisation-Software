@@ -5,8 +5,7 @@
 #include <QString>
 #include <QWidget>
 #include <QLineEdit>
-#include <QTextEdit>
-#include <QDebug>
+#include <QCheckBox>
 #include <qmessagebox.h>
 #include "ModelPart.h"
 #include "ModelPartList.h"
@@ -25,6 +24,18 @@ public:
 
     //--------------------------------------------------
     QString getFileName();
+    void placeholderTextName();
+    void setFileName(QString file);
+
+    int getRedValue(QString File);
+    void setRedValue(int red_val, QString File);
+    int getBlueValue(QString File);
+    void setBlueValue(int red_val, QString File);
+    int getGreenValue(QString File);
+    void setGreenValue(int red_val, QString File);
+    bool getVisibility();
+    void setVisibility(bool status);
+
     //--------------------------------------------------
 
 private:

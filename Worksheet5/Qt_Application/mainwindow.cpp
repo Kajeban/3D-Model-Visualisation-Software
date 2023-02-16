@@ -73,11 +73,33 @@ void MainWindow::handleButton2()
     emit statusUpdateMessage(QString("Add Button was Clicked"), 0);
 
     OptionDialog dialog(this);
-    if (dialog.exec() == QDialog::Accepted) {
+    dialog.placeholderTextName();
+
+    QModelIndex index = ui->treeView->currentIndex();
+    ModelPart* selectedPart = static_cast<ModelPart*>(index.internalPointer());
+    QString SelectedFileName = selectedPart->data(0).toString();
+
+    dialog.setFileName(SelectedFileName);
+
+    bool Visibility = selectedPart->visible();
+    selectedPart->setVisible(Visibility);
+    //dialog.getVisibility();
+    dialog.setVisibility(Visibility);
+
+
+    if (dialog.exec() == QDialog::Accepted) 
+    {
         // call a function in dialog to get information (string, colour)
         QString UserInput = dialog.getFileName();
+   
+        selectedPart->set(0, UserInput);
+        QString FileName = selectedPart->data(0).toString();
+
+        dialog.getVisibility();
+        dialog.setVisibility(Visibility);
+        
         // Add that information to status update
-        emit statusUpdateMessage(QString("Dialog Accepted: ") + UserInput, 0);
+        emit statusUpdateMessage(QString("File Name: ") + FileName, 0); 
     }
     else {
         emit statusUpdateMessage(QString("Dialog Rejected "), 0);

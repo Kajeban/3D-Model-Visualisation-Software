@@ -3,7 +3,6 @@
 
 #include <QMainWindow>
 #include <QString>
-#include <QDebug>
 #include "ModelPart.h"
 #include "ModelPartList.h"
 #include "QFileDialog.h"

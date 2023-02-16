@@ -126,15 +126,16 @@ unsigned char ModelPart::getColourB() {
 
 void ModelPart::setVisible(bool isVisible) {
     /* This is a placeholder function that will be used in the next worksheet */
+    data(1).toBool() = isVisible;
 
     /* As the name suggests ... */
 }
 
 bool ModelPart::visible() {
     /* This is a placeholder function that will be used in the next worksheet */
-
+    return (data(1));
     /* As the name suggests ... */
-    return false;
+
 }
 
 void ModelPart::loadSTL(QString fileName) {
