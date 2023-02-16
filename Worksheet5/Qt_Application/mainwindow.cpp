@@ -71,10 +71,13 @@ void MainWindow::handleButton()
 void MainWindow::handleButton2()
 {
     emit statusUpdateMessage(QString("Add Button was Clicked"), 0);
-    
+
     OptionDialog dialog(this);
     if (dialog.exec() == QDialog::Accepted) {
-        emit statusUpdateMessage(QString("Dialog Accepted "), 0);
+        // call a function in dialog to get information (string, colour)
+        QString UserInput = dialog.getFileName();
+        // Add that information to status update
+        emit statusUpdateMessage(QString("Dialog Accepted: ") + UserInput, 0);
     }
     else {
         emit statusUpdateMessage(QString("Dialog Rejected "), 0);
@@ -107,6 +110,10 @@ void MainWindow::on_actionOpen_File_triggered()
 //--------------------------------------------------
 void MainWindow::on_actionItem_Options_triggered()
 {
-
+    handleButton2();
 }
+//--------------------------------------------------
+
+//--------------------------------------------------
+
 //--------------------------------------------------
