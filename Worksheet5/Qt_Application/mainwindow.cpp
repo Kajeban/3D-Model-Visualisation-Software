@@ -40,6 +40,7 @@ MainWindow::MainWindow(QWidget* parent)
         /* Create Child Item */
         ModelPart* childItem = new ModelPart({ name, visible });
 
+
         /* Append to tree top-level */
         rootItem->appendChild(childItem);
 
@@ -78,13 +79,15 @@ void MainWindow::handleButton2()
     QModelIndex index = ui->treeView->currentIndex();
     ModelPart* selectedPart = static_cast<ModelPart*>(index.internalPointer());
     QString SelectedFileName = selectedPart->data(0).toString();
-
+    
     dialog.setFileName(SelectedFileName);
 
     bool Visibility = selectedPart->visible();
-    selectedPart->setVisible(selectedPart->visible());
-    dialog.setVisibility(Visibility);
+    dialog.setCheckBox(Visibility);
 
+    dialog.setRedValue(selectedPart->getColourR());
+    dialog.setBlueValue(selectedPart->getColourB());
+    dialog.setGreenValue(selectedPart->getColourG());
 
     if (dialog.exec() == QDialog::Accepted) 
     {
@@ -94,8 +97,9 @@ void MainWindow::handleButton2()
         selectedPart->set(0, UserInput);
         QString FileName = selectedPart->data(0).toString();
 
-        dialog.getVisibility();
-        dialog.setVisibility(Visibility);
+        bool CheckBoxStatus = dialog.getCheckBox();
+        selectedPart->setVisible(CheckBoxStatus);
+        selectedPart->setColour(dialog.getRedValue(), dialog.getGreenValue(), dialog.getBlueValue());
         
         // Add that information to status update
         emit statusUpdateMessage(QString("File Name: ") + FileName, 0); 

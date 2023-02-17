@@ -22,6 +22,9 @@ ModelPart::ModelPart(const QList<QVariant>& data, ModelPart* parent)
     : m_itemData(data), m_parentItem(parent) {
 
     /* You probably want to give the item a default colour */
+    r = 255;
+    g = 0;
+    b = 0;
 }
 
 
@@ -99,20 +102,23 @@ void ModelPart::setColour(const unsigned char R, const unsigned char G, const un
     /* This is a placeholder function that will be used in the next worksheet */
 
     /* As the name suggests ... */
+    r = R;
+    b = B;
+    g = G;
 }
 
 unsigned char ModelPart::getColourR() {
     /* This is a placeholder function that will be used in the next worksheet */
 
     /* As the name suggests ... */
-    return 0;   // needs updating
+    return r;   // needs updating
 }
 
 unsigned char ModelPart::getColourG() {
     /* This is a placeholder function that will be used in the next worksheet */
 
     /* As the name suggests ... */
-    return 0;   // needs updating
+    return g;   // needs updating
 }
 
 
@@ -120,13 +126,13 @@ unsigned char ModelPart::getColourB() {
     /* This is a placeholder function that will be used in the next worksheet */
 
     /* As the name suggests ... */
-    return 0;   // needs updating
+    return b;   // needs updating
 }
 
 
 void ModelPart::setVisible(bool isVisible) {
     /* This is a placeholder function that will be used in the next worksheet */
-    data(1) = isVisible;
+    set(1, isVisible?"true":"false");
     /* As the name suggests ... */
 }
 

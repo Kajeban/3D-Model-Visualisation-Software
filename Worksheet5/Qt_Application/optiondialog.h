@@ -27,14 +27,14 @@ public:
     void placeholderTextName();
     void setFileName(QString file);
 
-    int getRedValue(QString File);
-    void setRedValue(int red_val, QString File);
-    int getBlueValue(QString File);
-    void setBlueValue(int red_val, QString File);
-    int getGreenValue(QString File);
-    void setGreenValue(int red_val, QString File);
-    bool getVisibility();
-    void setVisibility(bool status);
+    int getRedValue();
+    void setRedValue(int red_val);
+    int getBlueValue();
+    void setBlueValue(int red_val);
+    int getGreenValue();
+    void setGreenValue(int red_val);
+    bool getCheckBox();
+    void setCheckBox(bool status);
 
     //--------------------------------------------------
 
