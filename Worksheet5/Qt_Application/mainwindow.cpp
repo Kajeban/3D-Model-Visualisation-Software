@@ -82,8 +82,7 @@ void MainWindow::handleButton2()
     dialog.setFileName(SelectedFileName);
 
     bool Visibility = selectedPart->visible();
-    selectedPart->setVisible(Visibility);
-    //dialog.getVisibility();
+    selectedPart->setVisible(selectedPart->visible());
     dialog.setVisibility(Visibility);
 
 
@@ -119,15 +118,28 @@ void MainWindow::handleTreeClicked()
     QString text = selectedPart->data(0).toString();
 
     emit statusUpdateMessage(QString("The selected item is: ") + text, 0);  
+
 }
 //--------------------------------------------------
 
 //--------------------------------------------------
 void MainWindow::on_actionOpen_File_triggered()
 {
+
+    QModelIndex index = ui->treeView->currentIndex();
+    ModelPart* selectedPart = static_cast<ModelPart*>(index.internalPointer());
+    QString SelectedFileName = selectedPart->data(0).toString();
+
     emit statusUpdateMessage(QString("Open File action triggered"),0);
     QString fileName = QFileDialog::getOpenFileName(this, tr("Open File"), "C:\\", tr("STL Files(*.stl);;Text Files(*.txt)"));
     emit statusUpdateMessage(QString("File Name: ") + fileName, 0);
+    QFileInfo info(fileName);
+    QString FileNameNoPath = info.fileName();
+
+    OptionDialog dialog(this);
+    dialog.setFileName(FileNameNoPath);
+
+    selectedPart->set(0, FileNameNoPath);
 }
 //--------------------------------------------------
 void MainWindow::on_actionItem_Options_triggered()
