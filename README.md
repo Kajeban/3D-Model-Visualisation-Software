@@ -10,7 +10,7 @@ This repository consists of full completed solutions for Worksheet 1,2,3,4,5.
 - Able to close the dialog and save the information to the selected item.
 - Open File Dialog Available in the Toolbar or in the File Menu
 - When .txt or .stl file selected, the currently selected item in the tree will update its name to reflect the file selected
-- Button Works
-	-> Push Button opens the Dialog
-	-> Open File Icon in Tool Bar opens the Open File Dialog
+- Button Works as required:
+	- Push Button opens the Dialog
+	- Open File Icon in Tool Bar opens the Open File Dialog
 - Live updates in the status bar when an action occurs
