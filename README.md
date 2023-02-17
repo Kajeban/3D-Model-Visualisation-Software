@@ -1,10 +1,9 @@
-Kajeban Baskaran Repository
-Student ID: 20362926
-Group: 11
+**Kajeban Baskaran Individual Repository**
+**Student ID: 20362926**
 
 This repository consists of full completed solutions for Worksheet 1,2,3,4,5.
 
-Latest Version:
+**Latest Version:**
 - Code compiles using CMake and Visual Studio
 - Tree View with multiple levels
 - Right Click option to modify Name, Colour (RGB), isVisible property in a separate dialog
