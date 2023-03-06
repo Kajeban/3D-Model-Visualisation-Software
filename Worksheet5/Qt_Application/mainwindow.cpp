@@ -99,6 +99,7 @@ void MainWindow::handleButton2()
 
         bool CheckBoxStatus = dialog.getCheckBox();
         selectedPart->setVisible(CheckBoxStatus);
+
         selectedPart->setColour(dialog.getRedValue(), dialog.getGreenValue(), dialog.getBlueValue());
         
         // Add that information to status update
@@ -127,8 +128,7 @@ void MainWindow::handleTreeClicked()
 //--------------------------------------------------
 
 //--------------------------------------------------
-void MainWindow::on_actionOpen_File_triggered()
-{
+void MainWindow::on_actionOpen_File_triggered() {
 
     QModelIndex index = ui->treeView->currentIndex();
     ModelPart* selectedPart = static_cast<ModelPart*>(index.internalPointer());
