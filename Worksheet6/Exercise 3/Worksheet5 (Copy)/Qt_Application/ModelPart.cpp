@@ -162,26 +162,30 @@ void ModelPart::loadSTL(QString fileName) {
     actor->SetMapper(mapper);
 }
 
-//vtkSmartPointer<vtkActor> ModelPart::getActor() {
+vtkSmartPointer<vtkActor> ModelPart::getActor() {
     /* This is a placeholder function that will be used in the next worksheet */
 
     /* Needs to return a smart pointer to the vtkActor to allow
      * part to be rendered.
      */
-     //}
+    return actor;
+}
 
-     //vtkActor* ModelPart::getNewActor() {
-         /* This is a placeholder function that will be used in the next worksheet.
-          *
-          * The default mapper/actor combination can only be used to render the part in
-          * the GUI, it CANNOT also be used to render the part in VR. This means you need
-          * to create a second mapper/actor combination for use in VR - that is the role
-          * of this function. */
+/*
+vtkActor* ModelPart::getNewActor() {
+    /* This is a placeholder function that will be used in the next worksheet.
+		  *
+		  * The default mapper/actor combination can only be used to render the part in
+		  * the GUI, it CANNOT also be used to render the part in VR. This means you need
+		  * to create a second mapper/actor combination for use in VR - that is the role
+		  * of this function. 
+        
+        // 1. Create new mapper 
+    vtkNew<vtkPolyDataMapper> new_mapper;
 
-
-          /* 1. Create new mapper */
-
-          /* 2. Create new actor and link to mapper */
+          // 2. Create new actor and link to mapper 
+    vtkNew<vtkActor> new_actor;
+    actor->SetMapper(mapper);
 
           /* 3. Link the vtkProperties of the original actor to the new actor. This means
            *    if you change properties of the original part (colour, position, etc), the
@@ -189,10 +193,15 @@ void ModelPart::loadSTL(QString fileName) {
            *
            *    See the vtkActor documentation, particularly the GetProperty() and SetProperty()
            *    functions.
-           */
+           
+    
+    new_actor->GetProperty()->SetColor(colour);
+    new_actor->SetProperty(actor);
+    new_actor->RotateX(30.0);
+    new_actor->RotateY(-45.0);
 
-
-           /* The new vtkActor pointer must be returned here */
-       //    return nullptr;
-
-       //}
+           // The new vtkActor pointer must be returned here 
+           //return nullptr;
+    return new_actor;
+}
+*/

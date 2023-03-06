@@ -199,7 +199,9 @@ void MainWindow::updateRenderFromTree(const QModelIndex& index)
     {
         ModelPart* selectedPart = static_cast<ModelPart*>(index.internalPointer());
         /* Retrieve actor from selected part and add to renderer */
-        //renderWindow->AddRenderer(selectedPart->getActor());
+        vtkNew<vtkRenderer> ren1;
+        ren1->AddActor(selectedPart->getActor());
+        renderWindow->AddRenderer(ren1);
     }
 
     /*Check to see if this part has any children */

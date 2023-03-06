@@ -28,7 +28,7 @@
    #include <vtkActor.h>
    #include <vtkSTLReader.h>
    #include <vtkColor.h>
-#include <vtkPolyDataMapper.h>
+   #include <vtkPolyDataMapper.h>
 
 class ModelPart {
 public:
@@ -146,6 +146,9 @@ private:
      vtkSmartPointer<vtkMapper>                  mapper;             /**< Mapper for rendering */
      vtkSmartPointer<vtkActor>                   actor;              /**< Actor for rendering */
      vtkColor3<unsigned char>                    colour;             /**< User defineable colour */
+
+     vtkSmartPointer<vtkMapper>                  new_mapper;
+     vtkSmartPointer<vtkActor>                   new_actor;
 };
 
 
