@@ -22,9 +22,9 @@ ModelPart::ModelPart(const QList<QVariant>& data, ModelPart* parent)
     : m_itemData(data), m_parentItem(parent) {
 
     /* You probably want to give the item a default colour */
-    r = 255;
-    g = 0;
-    b = 0;
+    r = 128;
+    g = 128;
+    b = 128;
 }
 
 
@@ -149,18 +149,19 @@ void ModelPart::loadSTL(QString fileName) {
     /* 1. Use the vtkSTLReader class to load the STL file
      *     https://vtk.org/doc/nightly/html/classvtkSTLReader.html
      */
-    vtkNew<vtkSTLReader> file;
-    std::string fileChar = fileName.toStdString();
-    file->SetFileName(fileChar.c_str());
+    file = vtkSmartPointer<vtkSTLReader>::New();
+    file->SetFileName(fileName.toLatin1().data());
     file->Update();
 
      /* 2. Initialise the part's vtkMapper */
-    vtkNew<vtkPolyDataMapper> mapper;
+    mapper = vtkSmartPointer<vtkPolyDataMapper>::New();
     mapper->SetInputConnection(file->GetOutputPort());
 
      /* 3. Initialise the part's vtkActor and link to the mapper */
-    vtkNew<vtkActor> actor;
+    actor = vtkSmartPointer<vtkActor>::New();
     actor->SetMapper(mapper);
+
+    actor->GetProperty()->SetDiffuse(0.8);
 }
 
 vtkSmartPointer<vtkActor> ModelPart::getActor() {
@@ -181,10 +182,10 @@ vtkActor* ModelPart::getNewActor() {
 		  of this function.  */
         
         // 1. Create new mapper 
-    vtkNew<vtkPolyDataMapper> newMapper;
+    newMapper = vtkSmartPointer<vtkPolyDataMapper>::New();
 
           // 2. Create new actor and link to mapper 
-    vtkNew<vtkActor> newActor;
+    newActor = vtkSmartPointer<vtkActor>::New();
     newActor->SetMapper(newMapper);
 
           /* 3. Link the vtkProperties of the original actor to the new actor. This means

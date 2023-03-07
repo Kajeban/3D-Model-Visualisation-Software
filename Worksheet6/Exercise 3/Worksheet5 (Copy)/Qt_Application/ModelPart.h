@@ -29,6 +29,8 @@
    #include <vtkSTLReader.h>
    #include <vtkColor.h>
    #include <vtkPolyDataMapper.h>
+#include <vtkNamedColors.h>
+#include <vtkProperty.h>
 
 class ModelPart {
 public:

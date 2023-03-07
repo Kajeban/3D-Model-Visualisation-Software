@@ -135,7 +135,7 @@ void MainWindow::handleButton2()
         selectedPart->setVisible(CheckBoxStatus);
 
         selectedPart->setColour(dialog.getRedValue(), dialog.getGreenValue(), dialog.getBlueValue());
-        
+ 
         // Add that information to status update
         emit statusUpdateMessage(QString("File Name: ") + FileName, 0); 
     }
@@ -180,6 +180,8 @@ void MainWindow::on_actionOpen_File_triggered() {
     selectedPart->set(0, FileNameNoPath);
 
     selectedPart->loadSTL(fileName);
+    updateRender();
+    ResetCamera();
 }
 //--------------------------------------------------
 void MainWindow::on_actionItem_Options_triggered()
@@ -202,9 +204,7 @@ void MainWindow::updateRenderFromTree(const QModelIndex& index)
     {
         ModelPart* selectedPart = static_cast<ModelPart*>(index.internalPointer());
         /* Retrieve actor from selected part and add to renderer */
-        vtkNew<vtkRenderer> ren1;
-        ren1->AddActor(selectedPart->getActor());
-        renderWindow->AddRenderer(ren1);
+        renderer->AddActor(selectedPart->getActor());
     }
 
     /*Check to see if this part has any children */
@@ -250,9 +250,9 @@ void MainWindow::on_actionStart_VR_triggered()
     QModelIndex index = ui->treeView->currentIndex();
     ModelPart* selectedPart = static_cast<ModelPart*>(index.internalPointer());
 
-    //ModelPart* childItem = new ModelPart({ name, visible });
     VRRenderThread* VR_Render = new VRRenderThread();
     VR_Render->addActorOffline(selectedPart->getNewActor());
+
 }
 //--------------------------------------------------
 void MainWindow::on_actionStop_VR_triggered()
