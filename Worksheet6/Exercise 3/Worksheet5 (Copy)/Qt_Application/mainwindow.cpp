@@ -11,6 +11,7 @@ MainWindow::MainWindow(QWidget* parent)
 
     //--------------------------------------------------
     ui->treeView->addAction(ui->actionItem_Options);
+    ui->treeView->addAction(ui->actionAdd_New_Item);
     //--------------------------------------------------
 
     //--------------------------------------------------
@@ -97,7 +98,9 @@ MainWindow::~MainWindow()
 //--------------------------------------------------
 void MainWindow::handleButton()
 {
-    emit statusUpdateMessage(QString("Add Button was Clicked"), 0);
+    emit statusUpdateMessage(QString("New Item Option Triggered"), 0);
+
+    on_actionAdd_New_Item_triggered();
 }
 
 void MainWindow::handleButton2()
@@ -176,7 +179,7 @@ void MainWindow::on_actionOpen_File_triggered() {
 
     selectedPart->set(0, FileNameNoPath);
 
-    selectedPart->loadSTL(FileNameNoPath);
+    selectedPart->loadSTL(fileName);
 }
 //--------------------------------------------------
 void MainWindow::on_actionItem_Options_triggered()
@@ -223,5 +226,37 @@ void MainWindow::updateRender()
     renderer->RemoveAllViewProps();
     updateRenderFromTree(partList->index(0, 0, QModelIndex()));
     renderer->Render();
+}
+//--------------------------------------------------
+void MainWindow::on_actionAdd_New_Item_triggered()
+{
+    emit statusUpdateMessage(QString("New Item Selection Triggered"), 0);
+    
+    QModelIndex index = ui->treeView->currentIndex();
+    ModelPart* selectedPart = static_cast<ModelPart*>(index.internalPointer());
+
+    QString name = QString("New Item");
+    QString visible("true");
+
+    ModelPart* childChildChildItem = new ModelPart({ name,visible });
+
+    selectedPart->appendChild(childChildChildItem); 
+}
+//--------------------------------------------------
+void MainWindow::on_actionStart_VR_triggered()
+{
+    emit statusUpdateMessage(QString("Start VR Action Triggered"), 0);
+
+    QModelIndex index = ui->treeView->currentIndex();
+    ModelPart* selectedPart = static_cast<ModelPart*>(index.internalPointer());
+
+    //ModelPart* childItem = new ModelPart({ name, visible });
+    VRRenderThread* VR_Render = new VRRenderThread();
+    VR_Render->addActorOffline(selectedPart->getNewActor());
+}
+//--------------------------------------------------
+void MainWindow::on_actionStop_VR_triggered()
+{
+    emit statusUpdateMessage(QString("Stop VR Action Triggered"), 0);
 }
 //--------------------------------------------------

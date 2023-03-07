@@ -147,8 +147,8 @@ private:
      vtkSmartPointer<vtkActor>                   actor;              /**< Actor for rendering */
      vtkColor3<unsigned char>                    colour;             /**< User defineable colour */
 
-     vtkSmartPointer<vtkMapper>                  new_mapper;
-     vtkSmartPointer<vtkActor>                   new_actor;
+     vtkSmartPointer<vtkMapper>                  newMapper;
+     vtkSmartPointer<vtkActor>                   newActor;
 };
 
 

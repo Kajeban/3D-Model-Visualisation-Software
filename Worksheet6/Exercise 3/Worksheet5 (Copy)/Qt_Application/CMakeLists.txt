@@ -29,6 +29,8 @@ set(PROJECT_SOURCES
 		optiondialog.cpp
 		optiondialog.h
 		optiondialog.ui
+		VRRenderThread.cpp
+		VRRenderThread.h
 )
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)

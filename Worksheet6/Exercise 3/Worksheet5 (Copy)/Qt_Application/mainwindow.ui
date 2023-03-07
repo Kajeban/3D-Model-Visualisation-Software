@@ -47,14 +47,14 @@
       <item>
        <widget class="QPushButton" name="pushButton">
         <property name="text">
-         <string>PushButton</string>
+         <string>Add New Item</string>
         </property>
        </widget>
       </item>
       <item>
        <widget class="QPushButton" name="pushButton_2">
         <property name="text">
-         <string>PushButton</string>
+         <string>Item Options</string>
         </property>
        </widget>
       </item>
@@ -81,7 +81,7 @@
      <x>0</x>
      <y>0</y>
      <width>810</width>
-     <height>17</height>
+     <height>21</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuFile">
@@ -90,7 +90,15 @@
     </property>
     <addaction name="actionOpen_File"/>
    </widget>
+   <widget class="QMenu" name="menuVR">
+    <property name="title">
+     <string>VR</string>
+    </property>
+    <addaction name="actionStart_VR"/>
+    <addaction name="actionStop_VR"/>
+   </widget>
    <addaction name="menuFile"/>
+   <addaction name="menuVR"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
   <widget class="QToolBar" name="toolBar">
@@ -104,6 +112,8 @@
     <bool>false</bool>
    </attribute>
    <addaction name="actionOpen_File"/>
+   <addaction name="actionStart_VR"/>
+   <addaction name="actionStop_VR"/>
   </widget>
   <action name="actionOpen_File">
    <property name="icon">
@@ -120,6 +130,38 @@
    </property>
    <property name="toolTip">
     <string>Item Options</string>
+   </property>
+  </action>
+  <action name="actionStart_VR">
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/Icons/Icons/startVR.png</normaloff>:/Icons/Icons/startVR.png</iconset>
+   </property>
+   <property name="text">
+    <string>Start VR</string>
+   </property>
+   <property name="toolTip">
+    <string>Start VR</string>
+   </property>
+  </action>
+  <action name="actionStop_VR">
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/Icons/Icons/stopVR.png</normaloff>:/Icons/Icons/stopVR.png</iconset>
+   </property>
+   <property name="text">
+    <string>Stop VR</string>
+   </property>
+   <property name="toolTip">
+    <string>Stop VR</string>
+   </property>
+  </action>
+  <action name="actionAdd_New_Item">
+   <property name="text">
+    <string>Add New Item</string>
+   </property>
+   <property name="toolTip">
+    <string>Add New Item</string>
    </property>
   </action>
  </widget>

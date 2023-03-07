@@ -15,7 +15,7 @@
 #include "vtkPolyDataMapper.h"
 #include "vtkCylinderSource.h"
 #include "vtkProperty.h"
-
+#include "VRRenderThread.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -38,6 +38,9 @@ public slots:
     void ResetCamera();
     void updateRenderFromTree(const QModelIndex& index);
     void updateRender();
+    void on_actionStart_VR_triggered();
+    void on_actionStop_VR_triggered();
+    void on_actionAdd_New_Item_triggered();
 
 signals:
     void statusUpdateMessage(const QString& message, int timeout);
