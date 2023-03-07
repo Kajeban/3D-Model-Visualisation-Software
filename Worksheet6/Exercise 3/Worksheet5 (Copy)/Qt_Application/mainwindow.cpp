@@ -62,21 +62,31 @@ MainWindow::MainWindow(QWidget* parent)
 
     ModelPart* rootItem = this->partList->getRootItem();
 
-    /* Add 3 top level items */
+    QString name = QString("TopLevel 0");
+    QString visible("true");
+
+    // Create Child Item 
+    ModelPart* childItem = new ModelPart({ name, visible });
+
+    rootItem->appendChild(childItem);
+
+    // Add 3 top level items 
+    /*
     for (int i = 0; i < 3; i++)
     {
-        /* Create strings for both data columns */
+        // Create strings for both data columns 
         QString name = QString("TopLevel %1").arg(i);
         QString visible("true");
 
-        /* Create Child Item */
+        // Create Child Item 
         ModelPart* childItem = new ModelPart({ name, visible });
 
 
-        /* Append to tree top-level */
+        // Append to tree top-level 
         rootItem->appendChild(childItem);
 
-        /* Add 5 sub-items */
+        // Add 5 sub-items
+        
         for (int j = 0; j < 5; j++)
         {
             QString name = QString("Item %1,%2").arg(i).arg(j);
@@ -84,10 +94,10 @@ MainWindow::MainWindow(QWidget* parent)
 
             ModelPart* childChildItem = new ModelPart({ name,visible });
 
-            /* Append to parent */
+            // Append to parent 
             childItem->appendChild(childChildItem);
         }
-    }
+    }*/
     //--------------------------------------------------
 }
 
@@ -253,10 +263,13 @@ void MainWindow::on_actionStart_VR_triggered()
     VRRenderThread* VR_Render = new VRRenderThread();
     VR_Render->addActorOffline(selectedPart->getNewActor());
 
+    VR_Render->start();
+
 }
 //--------------------------------------------------
 void MainWindow::on_actionStop_VR_triggered()
 {
     emit statusUpdateMessage(QString("Stop VR Action Triggered"), 0);
 }
+//--------------------------------------------------
 //--------------------------------------------------
