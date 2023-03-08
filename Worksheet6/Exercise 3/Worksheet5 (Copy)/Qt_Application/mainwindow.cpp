@@ -213,6 +213,11 @@ void MainWindow::updateRenderFromTree(const QModelIndex& index)
         ModelPart* selectedPart = static_cast<ModelPart*>(index.internalPointer());
         /* Retrieve actor from selected part and add to renderer */
         renderer->AddActor(selectedPart->getActor());
+        renderer->ResetCamera();
+        renderer->GetActiveCamera()->SetPosition(0, 0, 10);
+        renderer->GetActiveCamera()->SetFocalPoint(0, 0, 0);
+        renderer->GetActiveCamera()->SetViewUp(0, 1, 0);
+        renderer->ResetCameraClippingRange();
     }
 
     /*Check to see if this part has any children */
@@ -259,7 +264,21 @@ void MainWindow::on_actionStart_VR_triggered()
     ModelPart* selectedPart = static_cast<ModelPart*>(index.internalPointer());
 
     VRRenderThread* VR_Render = new VRRenderThread();
-    VR_Render->addActorOffline(selectedPart->getNewActor());
+
+    /* Loop through children and add their actors */
+    int rows = partList->rowCount(index);
+    for (int i = 0; i < rows; i++)
+    {
+        QModelIndex newIndex = (partList->index(i, 0, index));
+        ModelPart* selectedItem = static_cast<ModelPart*>(newIndex.internalPointer());
+
+        VR_Render->addActorOffline(selectedItem->getNewActor());
+    }
+
+    VR_Render->start();
+
+    //VRRenderThread* VR_Render = new VRRenderThread();
+    //VR_Render->addActorOffline(selectedPart->getNewActor());
 
     VR_Render->start();
 

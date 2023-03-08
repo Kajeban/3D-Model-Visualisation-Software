@@ -160,8 +160,7 @@ void ModelPart::loadSTL(QString fileName) {
      /* 3. Initialise the part's vtkActor and link to the mapper */
     actor = vtkSmartPointer<vtkActor>::New();
     actor->SetMapper(mapper);
-
-    actor->GetProperty()->SetDiffuse(0.8);
+    actor->AddPosition(-150., -50., -100.);
 }
 
 vtkSmartPointer<vtkActor> ModelPart::getActor() {
@@ -183,6 +182,7 @@ vtkActor* ModelPart::getNewActor() {
         
         // 1. Create new mapper 
     newMapper = vtkSmartPointer<vtkPolyDataMapper>::New();
+    newMapper->SetInputConnection(file->GetOutputPort());
 
           // 2. Create new actor and link to mapper 
     newActor = vtkSmartPointer<vtkActor>::New();
