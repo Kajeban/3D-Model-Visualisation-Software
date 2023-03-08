@@ -41,6 +41,7 @@ public slots:
     void on_actionStart_VR_triggered();
     void on_actionStop_VR_triggered();
     void on_actionAdd_New_Item_triggered();
+    void GetLights();
 
 signals:
     void statusUpdateMessage(const QString& message, int timeout);
@@ -53,6 +54,7 @@ private:
     //********
     vtkSmartPointer<vtkRenderer> renderer;
     vtkSmartPointer<vtkGenericOpenGLRenderWindow> renderWindow;
+    vtkSmartPointer<vtkLight> light;
     //********
 };
 

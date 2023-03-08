@@ -71,7 +71,7 @@ MainWindow::MainWindow(QWidget* parent)
     rootItem->appendChild(childItem);
 
     // Add 3 top level items 
-    /*
+    /* Commented out Empty Item Creations
     for (int i = 0; i < 3; i++)
     {
         // Create strings for both data columns 
@@ -187,8 +187,6 @@ void MainWindow::on_actionOpen_File_triggered() {
     OptionDialog dialog(this);
     dialog.setFileName(FileNameNoPath);
 
-    selectedPart->set(0, FileNameNoPath);
-
     selectedPart->loadSTL(fileName);
     updateRender();
     ResetCamera();
@@ -241,7 +239,7 @@ void MainWindow::updateRender()
 void MainWindow::on_actionAdd_New_Item_triggered()
 {
     emit statusUpdateMessage(QString("New Item Selection Triggered"), 0);
-    
+
     QModelIndex index = ui->treeView->currentIndex();
     ModelPart* selectedPart = static_cast<ModelPart*>(index.internalPointer());
 
@@ -250,7 +248,7 @@ void MainWindow::on_actionAdd_New_Item_triggered()
 
     ModelPart* childChildChildItem = new ModelPart({ name,visible });
 
-    selectedPart->appendChild(childChildChildItem); 
+    selectedPart->appendChild(childChildChildItem);
 }
 //--------------------------------------------------
 void MainWindow::on_actionStart_VR_triggered()
@@ -272,4 +270,27 @@ void MainWindow::on_actionStop_VR_triggered()
     emit statusUpdateMessage(QString("Stop VR Action Triggered"), 0);
 }
 //--------------------------------------------------
+void MainWindow::GetLights()
+{
+    light = vtkSmartPointer<vtkLight>::New();
+    light->SetLightTypeToSceneLight();
+    light->SetPosition(5, 5, 15);
+    light->SetPositional(true);
+    light->SetConeAngle(10);
+    light->SetFocalPoint(0, 0, 0);
+    light->SetDiffuseColor(1, 1, 1);
+    light->SetAmbientColor(1, 1, 1);
+    light->SetSpecularColor(1, 1, 1);
+    light->SetIntensity(0.5);
+
+    QModelIndex index = ui->treeView->currentIndex();
+    ModelPart* selectedPart = static_cast<ModelPart*>(index.internalPointer());
+    renderer->AddActor(selectedPart->getActor());
+
+    renderer->AddActor(selectedPart->getActor());
+
+    //ui->vtkWidget->GetRenderWindow()->Render();
+
+    renderer->AddLight(light);
+}
 //--------------------------------------------------

@@ -29,6 +29,7 @@
    #include <vtkSTLReader.h>
    #include <vtkColor.h>
    #include <vtkPolyDataMapper.h>
+   #include <vtkLight.h>
 #include <vtkNamedColors.h>
 #include <vtkProperty.h>
 
