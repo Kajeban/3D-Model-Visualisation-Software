@@ -55,6 +55,8 @@ private:
     vtkSmartPointer<vtkRenderer> renderer;
     vtkSmartPointer<vtkGenericOpenGLRenderWindow> renderWindow;
     vtkSmartPointer<vtkLight> light;
+
+    VRRenderThread* VR_Render;
     //********
 };
 

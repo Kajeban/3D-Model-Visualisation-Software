@@ -265,7 +265,7 @@ void MainWindow::on_actionStart_VR_triggered()
     QModelIndex index = ui->treeView->currentIndex();
     ModelPart* selectedPart = static_cast<ModelPart*>(index.internalPointer());
 
-    VRRenderThread* VR_Render = new VRRenderThread();
+    VR_Render = new VRRenderThread();
 
     /* Loop through children and add their actors */
     int rows = partList->rowCount(index);
@@ -287,6 +287,8 @@ void MainWindow::on_actionStart_VR_triggered()
 void MainWindow::on_actionStop_VR_triggered()
 {
     emit statusUpdateMessage(QString("Stop VR Action Triggered"), 0);
+
+    VR_Render->~VRRenderThread();
 }
 //--------------------------------------------------
 void MainWindow::GetLights()
