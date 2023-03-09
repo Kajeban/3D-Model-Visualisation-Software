@@ -172,6 +172,7 @@ nunit-*.xml
 [Dd]ebugPS/
 [Rr]eleasePS/
 dlldata.c
+*.gif
 
 # Benchmark Results
 BenchmarkDotNet.Artifacts/
