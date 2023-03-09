@@ -77,10 +77,33 @@ if(QT_VERSION_MAJOR EQUAL 6)
     qt_finalize_executable(Qt_Application)
 endif()
 
-
 #****************************
 add_custom_target( VRBindings )
 add_custom_target( TARGET VRBindings PRE_BUILD 
 COMMAND ${CMAKE_COMMAND} -E
               copy_directory ${CMAKE_SOURCE_DIR}/vrbindings ${CMAKE_BINARY_DIR}/ )
+#****************************
+
+#****************************
+if (WIN32)
+	set(CPACK_GENERATOR "NSIS")
+else()
+	set(CPACK_GENERATOR "ZIP")
+endif()
+
+include (CPack)
+
+add_library(ModelPartLib ModelPart.cpp)
+add_library(ModelPartListsLib ModelPartList.cpp)
+add_library(OptionDialogLib optiondialog.cpp)
+add_library(VRRenderThreadLib VRRenderThread.cpp)
+
+add_executable( my_app mainwindow.cpp)
+
+target_link_libraries( my_app ModelPartLib ModelPartListsLib OptionDialogLib VRRenderThreadLib)
+
+install( TARGETS my_app
+		 RUNTIME DESTINATION bin
+	     LIBRARY DESTINATION lib 
+		 ARCHIVE DESTINATION lib/static )
 #****************************
