@@ -1,7 +1,10 @@
 **Kajeban Baskaran Individual Repository,**
 **Student ID: 20362926**
 
-This repository consists of full completed solutions for Worksheet 1,2,3,4,5,6.
+This repository consists of full completed solutions for Worksheet 1,2,3,4,5,6,7.
+
+Demo:
+![Application Demo] (https://imgur.com/a/VdLPywl.gif)
 
 **Latest Updates:**
 - New Interactive TreeView where you can add new child items using the "Add New Item" Push Button or through the right click menu.
@@ -9,6 +12,7 @@ This repository consists of full completed solutions for Worksheet 1,2,3,4,5,6.
 - Two new buttons created on toolbar allowing you to Start VR and Stop VR, same options available in a drop down menu called "VR"
 - Able to view .stl CAD Models in the Software with Interactive Tools
 - Able to press the Start VR Button to directly view this in a VR System
+- Demo Documentation available from Github Pages: https://kajeban.github.io/2022_20362926/
 
 **Features:**
 - Code compiles using CMake and Visual Studio
