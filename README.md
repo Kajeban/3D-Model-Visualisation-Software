@@ -3,8 +3,9 @@
 
 This repository consists of full completed solutions for Worksheet 1,2,3,4,5,6,7.
 
-Demo:
-![](http://i.imgur.com/60bts.gif)
+**Demo:**
+
+![](https://i.imgur.com/a/VdLPywl.gif)
 
 **Latest Updates:**
 - New Interactive TreeView where you can add new child items using the "Add New Item" Push Button or through the right click menu.
