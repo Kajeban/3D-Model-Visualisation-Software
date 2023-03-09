@@ -280,8 +280,6 @@ void MainWindow::on_actionStart_VR_triggered()
     //VRRenderThread* VR_Render = new VRRenderThread();
     //VR_Render->addActorOffline(selectedPart->getNewActor());
 
-    VR_Render->start();
-
 }
 //--------------------------------------------------
 void MainWindow::on_actionStop_VR_triggered()
