@@ -277,6 +277,7 @@ void MainWindow::on_actionStart_VR_triggered()
         VR_Render->addActorOffline(selectedItem->getNewActor());
     }
 
+    //Start VR
     VR_Render->start();
 }
 //--------------------------------------------------
