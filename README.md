@@ -5,7 +5,8 @@ This repository consists of full completed solutions for Worksheet 1,2,3,4,5,6,7
 
 **Demo:**
 
-![](Application_Demo.gif)
+![Application_Demo](https://user-images.githubusercontent.com/125026601/224150410-6cede15c-7516-492f-9c71-a83213d62e8c.gif)
+
 
 **Latest Updates:**
 - New Interactive TreeView where you can add new child items using the "Add New Item" Push Button or through the right click menu.
