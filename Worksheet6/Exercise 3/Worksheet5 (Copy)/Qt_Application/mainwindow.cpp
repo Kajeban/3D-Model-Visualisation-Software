@@ -187,6 +187,8 @@ void MainWindow::on_actionOpen_File_triggered() {
     OptionDialog dialog(this);
     dialog.setFileName(FileNameNoPath);
 
+    selectedPart->set(0, FileNameNoPath);
+
     selectedPart->loadSTL(fileName);
     updateRender();
     ResetCamera();
