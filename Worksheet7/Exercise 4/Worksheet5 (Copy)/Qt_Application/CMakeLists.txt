@@ -98,11 +98,11 @@ add_library(ModelPartListsLib ModelPartList.cpp)
 add_library(OptionDialogLib optiondialog.cpp)
 add_library(VRRenderThreadLib VRRenderThread.cpp)
 
-add_executable( my_app mainwindow.cpp)
+add_executable( application mainwindow.cpp)
 
-target_link_libraries( my_app ModelPartLib ModelPartListsLib OptionDialogLib VRRenderThreadLib)
+target_link_libraries( application ModelPartLib ModelPartListsLib OptionDialogLib VRRenderThreadLib)
 
-install( TARGETS my_app
+install( TARGETS application ModelPartLib ModelPartListsLib OptionDialogLib VRRenderThreadLib
 		 RUNTIME DESTINATION bin
 	     LIBRARY DESTINATION lib 
 		 ARCHIVE DESTINATION lib/static )
