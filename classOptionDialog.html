@@ -93,12 +93,12 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a4c744209fa9c86072c54e0dd0d0a0fc9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad3fc9b8bc8359e184a5ca0d694814ac1"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classOptionDialog.html#ad3fc9b8bc8359e184a5ca0d694814ac1">getBlueValue</a> ()</td></tr>
 <tr class="separator:ad3fc9b8bc8359e184a5ca0d694814ac1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad0c839aa6a0cd3b95afaac5f4e615e96"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classOptionDialog.html#ad0c839aa6a0cd3b95afaac5f4e615e96">setBlueValue</a> (int red_val)</td></tr>
-<tr class="separator:ad0c839aa6a0cd3b95afaac5f4e615e96"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab1635a93f1339b5f46e44197766fdcdb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classOptionDialog.html#ab1635a93f1339b5f46e44197766fdcdb">setBlueValue</a> (int blue_val)</td></tr>
+<tr class="separator:ab1635a93f1339b5f46e44197766fdcdb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3269047a6ac3141f8b025db4cd6b0405"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classOptionDialog.html#a3269047a6ac3141f8b025db4cd6b0405">getGreenValue</a> ()</td></tr>
 <tr class="separator:a3269047a6ac3141f8b025db4cd6b0405"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a492e43dba03354c9a0a1bcf4df69b97d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classOptionDialog.html#a492e43dba03354c9a0a1bcf4df69b97d">setGreenValue</a> (int red_val)</td></tr>
-<tr class="separator:a492e43dba03354c9a0a1bcf4df69b97d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a04d9ea844b28bc4857699b6cdd8cd764"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classOptionDialog.html#a04d9ea844b28bc4857699b6cdd8cd764">setGreenValue</a> (int green_val)</td></tr>
+<tr class="separator:a04d9ea844b28bc4857699b6cdd8cd764"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a81cad18703346c5c8dcbb547901d12b8"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classOptionDialog.html#a81cad18703346c5c8dcbb547901d12b8">getCheckBox</a> ()</td></tr>
 <tr class="separator:a81cad18703346c5c8dcbb547901d12b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a56752394aa37a6cf99445dd16d257644"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classOptionDialog.html#a56752394aa37a6cf99445dd16d257644">setCheckBox</a> (bool status)</td></tr>
@@ -128,7 +128,12 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Creates new Option Dialog object Default Constructor </p>
+<p>Creates new Option Dialog object. Default Constructor. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">parent</td><td>not used </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -165,7 +170,13 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Getting Blue Colour Value This functions gets the colour blue value (a value between 0 and 255) the user enters in the Dialog Box </p><dl class="section return"><dt>Returns</dt><dd>The number from the Blue Spin Box </dd></dl>
+<p>Getting Blue Colour Value. This functions gets the colour blue value (a value between 0 and 255) the user enters in the Dialog Box. </p><dl class="section return"><dt>Returns</dt><dd>The number from the Blue Spin Box. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">blue_val</td><td>is used to store new int value of blue (0-255). </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -183,7 +194,7 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Getting Check Box Status This function gets the status of the check box (checked or not checked) and stores it as a bool </p>
+<p>Getting Check Box Status. This function gets the status of the check box (checked or not checked) and stores it as a bool. </p>
 
 </div>
 </div>
@@ -201,7 +212,7 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Getting File Name This function gets the text the user enters in the Option Dialog box and stores it as a QString </p><dl class="section return"><dt>Returns</dt><dd>The text the user enters </dd></dl>
+<p>Getting File Name. This function gets the text the user enters in the Option Dialog box and stores it as a QString </p><dl class="section return"><dt>Returns</dt><dd>The text the user enters </dd></dl>
 
 </div>
 </div>
@@ -219,7 +230,7 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Getting Green Colour Value This functions gets the colour green value (a value between 0 and 255) the user enters in the Dialog Box </p><dl class="section return"><dt>Returns</dt><dd>The number from the Green Spin Box </dd></dl>
+<p>Getting Green Colour Value. This functions gets the colour green value (a value between 0 and 255) the user enters in the Dialog Box. </p><dl class="section return"><dt>Returns</dt><dd>The number from the Green Spin Box. </dd></dl>
 
 </div>
 </div>
@@ -237,7 +248,7 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Getting Red Colour Value This functions gets the colour red value (a value between 0 and 255) the user enters in the Dialog Box </p><dl class="section return"><dt>Returns</dt><dd>The number from the Red Spin Box </dd></dl>
+<p>Getting Red Colour Value. This functions gets the colour red value (a value between 0 and 255) the user enters in the Dialog Box. </p><dl class="section return"><dt>Returns</dt><dd>The number from the Red Spin Box. </dd></dl>
 
 </div>
 </div>
@@ -255,12 +266,12 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Set Placeholder Text This functions sets text that will be in the textbox when the user opens Option Dialog Box </p>
+<p>Set Placeholder Text. This functions sets text that will be in the textbox when the user opens Option Dialog Box. </p>
 
 </div>
 </div>
-<a id="ad0c839aa6a0cd3b95afaac5f4e615e96"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad0c839aa6a0cd3b95afaac5f4e615e96">&#9670;&nbsp;</a></span>setBlueValue()</h2>
+<a id="ab1635a93f1339b5f46e44197766fdcdb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab1635a93f1339b5f46e44197766fdcdb">&#9670;&nbsp;</a></span>setBlueValue()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -269,12 +280,12 @@ Public Member Functions</h2></td></tr>
           <td class="memname">void OptionDialog::setBlueValue </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>red_val</em></td><td>)</td>
+          <td class="paramname"><em>blue_val</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Setting Blue Colour Value This function sets the colour blue value (a value between 0 and 255) so it is pre-typed in the spin box </p>
+<p>Setting Blue Colour Value. This function sets the colour blue value (a value between 0 and 255) so it is pre-typed in the spin box. </p>
 
 </div>
 </div>
@@ -293,7 +304,12 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Setting Check Box Status This function sets the Check Box Status (checked or not checked). Used to pre-set status when saving data. </p>
+<p>Setting Check Box Status. This function sets the Check Box Status (checked or not checked). Used to pre-set status when saving data. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">status</td><td>is used to store new check status. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -312,12 +328,17 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Setting File Name This function sets the text the user enters in the Option Dialog Box and adds it to the </p>
+<p>Setting File Name. This function sets the text the user enters in the Option Dialog Box. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">file</td><td>is used to store the user input. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
-<a id="a492e43dba03354c9a0a1bcf4df69b97d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a492e43dba03354c9a0a1bcf4df69b97d">&#9670;&nbsp;</a></span>setGreenValue()</h2>
+<a id="a04d9ea844b28bc4857699b6cdd8cd764"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a04d9ea844b28bc4857699b6cdd8cd764">&#9670;&nbsp;</a></span>setGreenValue()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -326,12 +347,17 @@ Public Member Functions</h2></td></tr>
           <td class="memname">void OptionDialog::setGreenValue </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>red_val</em></td><td>)</td>
+          <td class="paramname"><em>green_val</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Setting Green Colour Value This function sets the colour green value (a value between 0 and 255) so it is pre-typed in the spin box </p>
+<p>Setting Green Colour Value. This function sets the colour green value (a value between 0 and 255) so it is pre-typed in the spin box. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">green_val</td><td>is used to store new int value of green (0-255). </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -350,7 +376,12 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Setting Red Colour Value This function sets the colour red value (a value between 0 and 255) so it is pre-typed in the spin box </p>
+<p>Setting Red Colour Value. This function sets the colour red value (a value between 0 and 255) so it is pre-typed in the spin box. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">red_val</td><td>is used to store new int value of red (0-255). </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
