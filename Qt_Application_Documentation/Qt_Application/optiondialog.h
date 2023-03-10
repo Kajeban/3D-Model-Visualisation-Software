@@ -84,7 +84,6 @@ public:
     /** Getting Blue Colour Value.
     * This functions gets the colour blue value (a value between 0 and 255) the user enters in the Dialog Box.
     * @return The number from the Blue Spin Box.
-    * @param blue_val is used to store new int value of blue (0-255).
     */
     int getBlueValue();
     //--------------------------------------------------
@@ -92,6 +91,7 @@ public:
     //--------------------------------------------------
     /** Setting Blue Colour Value.
     * This function sets the colour blue value (a value between 0 and 255) so it is pre-typed in the spin box.
+    * @param blue_val is used to store new int value of blue (0-255).
     */
     void setBlueValue(int blue_val);
     //--------------------------------------------------
