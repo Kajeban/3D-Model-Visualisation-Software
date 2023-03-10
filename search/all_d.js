@@ -1,7 +1,5 @@
 var searchData=
 [
-  ['visible_42',['visible',['../classModelPart.html#a6ae791107c322f3e729a8de69257fa4b',1,'ModelPart']]],
-  ['vrrenderthread_43',['VRRenderThread',['../classVRRenderThread.html',1,'VRRenderThread'],['../classVRRenderThread.html#a35976e55f6655840aa217aa8a066f196',1,'VRRenderThread::VRRenderThread()']]],
-  ['vrrenderthread_2ecpp_44',['VRRenderThread.cpp',['../VRRenderThread_8cpp.html',1,'']]],
-  ['vrrenderthread_2eh_45',['VRRenderThread.h',['../VRRenderThread_8h.html',1,'']]]
+  ['updaterender_55',['updateRender',['../classMainWindow.html#aa2a5945f9c4bf90022f0a7ad3db34c49',1,'MainWindow']]],
+  ['updaterenderfromtree_56',['updateRenderFromTree',['../classMainWindow.html#a3efc38e6be895f53a3f973906e4174b8',1,'MainWindow']]]
 ];
