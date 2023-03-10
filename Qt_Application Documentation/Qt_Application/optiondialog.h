@@ -14,10 +14,6 @@
 * This file contains the declarations of all functions and constructors used for the Options Dialog Box.
 */
 
-/*
-* @brief OptionDialog class used for Option Dialog Box Manipulations
-*/
-
 namespace Ui {
 class OptionDialog;
 }
@@ -36,17 +32,20 @@ public:
 
     //--------------------------------------------------
     /** Getting File Name
-    * This function gets the text the user enters in the Option Dialog box and stores it as a QString 
+    * This function gets the text the user enters in the Option Dialog box and stores it as a QString
     * @return The text the user enters
     */
     QString getFileName();
 
     /**
-    * Set Placeholder Text 
+    * Set Placeholder Text
     * This functions sets text that will be in the textbox when the user opens Option Dialog Box
     */
-
     void placeholderTextName();
+
+    /** Setting File Name
+    * This function sets the text the user enters in the Option Dialog Box and adds it to the
+    */
     void setFileName(QString file);
 
     int getRedValue();
