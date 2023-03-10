@@ -14,7 +14,10 @@ This repository consists of full completed solutions for Worksheet 1,2,3,4,5,6,7
 - Two new buttons created on toolbar allowing you to Start VR and Stop VR, same options available in a drop down menu called "VR"
 - Able to view .stl CAD Models in the Software with Interactive Tools
 - Able to press the Start VR Button to directly view this in a VR System
-- Demo Documentation available from Github Pages: https://kajeban.github.io/2022_20362926/
+- Full Documentation for QT Application available from Github Pages: https://kajeban.github.io/2022_20362926/
+
+<img width="960" alt="image" src="https://user-images.githubusercontent.com/125026601/224296019-5c206f0f-4f27-41d5-834e-526fae96ac34.png">
+<img width="960" alt="image" src="https://user-images.githubusercontent.com/125026601/224296198-474f45d8-8e44-4c36-9e06-2fd419112da3.png">
 
 **Features:**
 - Code compiles using CMake and Visual Studio
