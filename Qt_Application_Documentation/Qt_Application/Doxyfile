@@ -56,11 +56,6 @@ PROJECT_NUMBER         =
 
 PROJECT_BRIEF          =	"Author: Kajeban Baskaran, Student ID: 20362926"
 
-/*! \mainpage My Project Overview
- * \section overview_sec Overview
- * This Project enables users to open and load STL files into a GUI to view and interact with it. Includes an option to view it on a Virtual Reality System.
-*/
-
 # With the PROJECT_LOGO tag one can specify a logo or an icon that is included
 # in the documentation. The maximum height of the logo should not exceed 55
 # pixels and the maximum width should not exceed 200 pixels. Doxygen will copy
