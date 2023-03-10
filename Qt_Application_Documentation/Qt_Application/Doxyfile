@@ -54,8 +54,12 @@ PROJECT_NUMBER         =
 # for a project that appears at the top of each page and should give viewer a
 # quick idea about the purpose of the project. Keep the description short.
 
-PROJECT_BRIEF          =	"This Project enables users to add STL files to view and interact with them on a GUI with options to view them on a Virtual Reality System.
-							Created by Kajeban Baskaran"
+PROJECT_BRIEF          =	"Author: Kajeban Baskaran, Student ID: 20362926"
+
+/*! \mainpage My Project Overview
+ * \section overview_sec Overview
+ * This Project enables users to open and load STL files into a GUI to view and interact with it. Includes an option to view it on a Virtual Reality System.
+*/
 
 # With the PROJECT_LOGO tag one can specify a logo or an icon that is included
 # in the documentation. The maximum height of the logo should not exceed 55
