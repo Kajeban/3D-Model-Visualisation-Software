@@ -33,6 +33,10 @@ public:
     * Default Constructor
     */
     explicit OptionDialog(QWidget *parent = nullptr);
+
+    /**
+    * Destructor
+    */
     ~OptionDialog();
 
     //--------------------------------------------------
