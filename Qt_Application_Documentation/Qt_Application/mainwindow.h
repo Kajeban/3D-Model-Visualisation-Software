@@ -17,7 +17,7 @@
 #include "vtkProperty.h"
 #include "VRRenderThread.h"
 
-/** @file optiondialog.h
+/** @file mainwindow.h
 *
 * EEEE2046 - Software Engineering & VR Project
 *
