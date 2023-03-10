@@ -16,8 +16,8 @@ This repository consists of full completed solutions for Worksheet 1,2,3,4,5,6,7
 - Able to press the Start VR Button to directly view this in a VR System
 - Full Documentation for QT Application available from Github Pages: https://kajeban.github.io/2022_20362926/
 
-<img width="960" alt="image" src="https://user-images.githubusercontent.com/125026601/224296019-5c206f0f-4f27-41d5-834e-526fae96ac34.png">
-<img width="960" alt="image" src="https://user-images.githubusercontent.com/125026601/224296198-474f45d8-8e44-4c36-9e06-2fd419112da3.png">
+<img width="960" alt="image" src="https://user-images.githubusercontent.com/125026601/224299613-542569cf-0217-44a6-a2ec-ecf23005b19f.png">
+<img width="960" alt="image" src="https://user-images.githubusercontent.com/125026601/224299673-98810603-d776-441c-be8c-bc9af5e414bc.png">
 
 **Features:**
 - Code compiles using CMake and Visual Studio
