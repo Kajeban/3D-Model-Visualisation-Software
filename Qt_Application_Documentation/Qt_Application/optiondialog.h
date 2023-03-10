@@ -10,8 +10,13 @@
 #include "ModelPart.h"
 #include "ModelPartList.h"
 
-/** @file
+/** @file optiondialog.h
+* 
+* EEEE2046 - Software Engineering & VR Project
+* 
 * This file contains the declarations of all functions and constructors used for the Options Dialog Box.
+* 
+* Kajeban Baskaran 2022
 */
 
 namespace Ui {
@@ -25,7 +30,7 @@ class OptionDialog : public QDialog
 public:
     /**
     * Creates new Option Dialog object
-    * @brief Default Constructor
+    * Default Constructor
     */
     explicit OptionDialog(QWidget *parent = nullptr);
     ~OptionDialog();

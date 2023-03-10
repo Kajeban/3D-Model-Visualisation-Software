@@ -103,8 +103,22 @@ public:
       */
     void setColour(const unsigned char R, const unsigned char G, const unsigned char B);
 
+    /** Get Red Colour
+    * This function gets the stored value of red.
+    * @return the value of the colour red (0-255)
+    */
     unsigned char getColourR();
+
+    /** Get Green Colour
+    * This function gets the stored value of green.
+    * @return the value of the colour green (0-255)
+    */
     unsigned char getColourG();
+
+    /** Get Blue Colour
+    * This function gets the stored value of blue.
+    * @return the value of the colour blue (0-255)
+    */
     unsigned char getColourB();
 
     /** Set visible flag
